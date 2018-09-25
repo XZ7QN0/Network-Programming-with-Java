@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chapter 1 Notes</title>
+    <!--Internal CSS ftw!-->
+    <style>
+        .definition {
+            color: forestgreen;
+        }
+
+        h3 {
+            color: cyan;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        p,
+        h1,
+        li,
+        ul {
+            color: white
+        }
+
+        abbr {
+            color: gold
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Chapter 1: Basic Network Concepts</h1>
+    <p>
+        <span class="definition">Network</span> - A collection of computers and other devices that can send data to
+        and receive data from one another in almost real-time.
+    </p>
+    <ul>
+        <li>Often connected by wires (bits of data turned into electromagnetic waves)</li>
+        <li>Wireless networks transmit data using radio waves</li>
+    </ul>
+    <p><span class="definition">Nodes</span> - Any device that can connect to a network</p>
+    <p><span class="definition">Host</span> - A node that is a general-purpose computer</p>
+    <h3>Layers in Detail</h3>
+    <p><span class="definition">Host-to-Network:</span> The parts of networking that is hidden from the developer, which defines how
+        a particular network interface (Ethernet cord, WiFi antenna, or any hardware used for networking) sends IP datagrams
+        over its physical connection to the local network and the world. Can also be known as:</p>
+    <ul>
+        <li>Link layer</li>
+        <li>Data link layer</li>
+        <li>Network interface layer</li>
+    </ul>
+    <p>Host-to-Network typically concerns a developer when the concern is about performance.</p>
+    <p><span class="definition">Internet Layer:</span> Known as the network layer in the
+        <abbr title="Open Systems Interconnection">OSI</abbr> model, this layer defines how:</p>
+    <ol>
+        <li>bits and bytes of data are organized into larger groups called packets, and</li>
+        <li>the addressing scheme by which different machines find one another.</li>
+    </ol>
+    <p>The most wifely used network layer protocol (and the only one that Java understands) is the Internet Protocl (IP),
+        which is actually two protocols:</p>
+    <p>IPv4</p>
+    <ul>
+        <li>32-bit addresses</li>
+        <li>Accounts for >90% of Internet traffic</li>
+        <li>Little over 4 billion possible IP addresses</li>
+        <li>Datagram header is 20-60 bytes long</li>
+        <li>Payload that contains up to 65,515 bytes of data</li>
+    </ul>
+    <p>IPv6</p>
+    <ul>
+        <li>128-bit addresses & additional routing features</li>
+        <li>Catching on fast</li>
+        <li>Datagram contains larger header</li>
+        <li>Up to 4GB of data</li>
+        <li>Will be enough IP address for everyone</li>
+        <li>Written in 8 blocks of 4 hexadecimal digits separated by colons</li>
+    </ul>
+    <p><span class="definition">Transport Layer:</span> The layer responsible for ensuring that packets are received in the order they were sent and
+        that no data is lost or corrupted. If packets get lost or corrupted, the transport layer asks the sender to retransmit the packet.
+        IP networks implement this by adding an additional header to each datagram that contains more information.
+        There are two primary protocols at this level:</p>
+    <ul><abbr title="Transmission Control Protocol">TCP (Reliable Protocol)</abbr>
+        <li>High-overhead protocol that allows for retransmission of lost or corrupted data and delivery
+            of bytes in the order they were sent</li>
+        <br><abbr title="User Datagram Protocol">UDP (Unreliable Protocol)</abbr>
+        <li>Allows the receiver to detect corrupted packets but does not guarantee that
+            packets are delivered in the correct order (or at all)</li>
+        <li>Is often faster than TCP</li>
+    </ul>
+    <p><span class="definition">Application Layer:</span> The layer that delivers data to the user.
+        The three lower layers (Transport layer, Internet layer, and Host-to-Network layer) work together
+        to define how data is transferred from one computer to another. It decides what to do
+        with the data after it's transferred. Typically, data will be presented to a user in a
+        form that they understand, rather than a long stream of numbers. The application layer
+        is where most of the network parts of our programs will spend their time.</p>
+    <p>Some application layer protocols include:</p>
+    <ul>
+        <li><abbr title="Hypertext Transfer Protocol">HTTP</abbr> (Web)</li>
+        <li>SMTP, POP, and IMAP (Email)</li>
+        <li>FTP, FSP, and TFTP (File Transfer)</li>
+        <li>NFS (File access)</li>
+        <li>Gnutella & BitTorrent (File sharing)</li>
+        <li><abbr title="Session Initiation Protocol">SIP</abbr> & Skype (Voice communication)</li>
+        <li>& more</li>
+    </ul>
+    <h3>Protocols in Detail</h3>
+    <ul>IP (Internet Protocol)
+        <li>Developed with military sponsorship during Cold War</li>
+        <li>Robust</li>
+        <li>Designed to allow multiple routes between any two points and to route packets of data around damaged routers</li>
+        <li>Open & platform-independent</li>
+        <li>Packets may not arrive in the order they were sent, or even arrive at all</li>
+    </ul>
+    <ul>TCP
+        <li>Layered on top of IP to give each end of connection the ability to acknowledge receipt of IP packets and
+            request retransmission of lost or corrupted packets</li>
+        <li>Allows packets to be reorganized on receiving end in the same order packets were sent</li>
+        <li>Carries a good amount of overhead</li>
+    </ul>
+    <ul>UDP
+        <li>Chosen over TCP if order of data sent does not matter, and loss of individual packets won't corrupt data stream</li>
+        <li>Acceptable for applications where some data loss is not noticed by end user
+            (ex: losing a few bits from video or audio signal)</li>
+        <li>Error-correcting codes can be built into UDP data streams at the application level for any missing data</li>
+    </ul>
+    <ul><abbr title="Internet Control Message Protocol">ICMP</abbr>
+        <li>Another protocol that can run on top of IP</li>
+        <li>Uses raw IP datagrams to relay error messages between hosts</li>
+        <li>Used in ping</li>
+        <li>Java doesn't support ICMP, nor allow sending of raw IP datagrams
+            (Only supports TCP and UDP protocols, and application layer protocols built on top of these)</li>
+    </ul>
+    <ul>The following layers and protocols can only be implemented in Java programs by linking to native code:
+        <li>Transport layer</li>
+        <li>Internet layer</li>
+        <li>Lower layer protocols, such as
+            <ul>
+                <li>ICMP</li>
+                <li>IGMP</li>
+                <li>ARP</li>
+                <li>RARP</li>
+                <li>RSVP</li>
+                <li>Others</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
