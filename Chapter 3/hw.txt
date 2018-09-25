@@ -1,0 +1,15 @@
+random array size between 1-10
+
+two threads share the array
+
+one thread calculates sum
+
+other thread calculates other part of array
+
+ask user how many threads required
+
+divide array among multiple threads
+
+each one will find the sum of the section
+
+find total of that
