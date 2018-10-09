@@ -3,7 +3,7 @@ A repository to contain my programming assignments for Network Programming in Ja
 
 TODO: Update this README to have better detail on what this repository holds.
 
-##[Chapter 1: Basic Network Concepts](Chapter 1)
+##Chapter 1: Basic Network Concepts
 - Summary of Chapter 1 here
 
 ##Chapter 2: Streams (I/O)
