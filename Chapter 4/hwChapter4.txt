@@ -1,0 +1,14 @@
+Create a file called logfile in a text file and put the line on page 137 in
+the file 1000 times.
+
+Then see if there's any difference in the timing.
+
+Run programs in Example 4-10 and Examples 4-11 and 4-12.
+
+Check the execution time between the two programs,
+or check when the program started and when the program ended.
+
+Change the number of the thread pool continuously to
+see if there is better performance.
+
+Get the difference between both programs.
