@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="278744ef-7a73-4ce8-9edf-304ccda5d3f8" name="Default Changelist" comment="" />
+    <list default="true" id="278744ef-7a73-4ce8-9edf-304ccda5d3f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../MultithreadedSumFinder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MultithreadedSumFinder/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +48,7 @@
     <session id="1890001007">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -64,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MultithreadedArraySearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="77" column="36" selection-start-line="77" selection-end-line="78" />
+            <state relative-caret-position="374">
+              <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/threadCreationSearch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -209,12 +212,12 @@
       <option name="presentableId" value="Default" />
       <updated>1537623281086</updated>
       <workItem from="1537623285667" duration="15306000" />
-      <workItem from="1537909925814" duration="721000" />
+      <workItem from="1537909925814" duration="960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16027000" />
+    <option name="totallyTimeSpent" value="16266000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,12 +276,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MultithreadedArraySearch.java">
+    <entry file="file://$PROJECT_DIR$/src/threadCreationSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="36" selection-start-line="77" selection-end-line="78" />
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#747#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -295,12 +298,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/threadCreationSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/MultithreadedArraySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="374">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding>
-            <element signature="e#0#747#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
