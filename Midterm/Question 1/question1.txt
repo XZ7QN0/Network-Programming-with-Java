@@ -1,0 +1,6 @@
+Write a program to read a file that contains list of hostname and print the ip address of each one. (20)
+
+The file contains the following lines:
+www.ndnu.edu
+www.yahoo.com
+www.google.com

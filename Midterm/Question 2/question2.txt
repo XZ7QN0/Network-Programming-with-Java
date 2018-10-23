@@ -1,0 +1,8 @@
+Write a program to do the following: (20)
+  a. Define an array "data" of size 30 and intialze values from 1 to 30
+  b. Create 3 threads. Each one will find the largest number of
+  part of the array. 
+  Thread1 will find the max of data[0] to data[9]. Thread2 will find
+  the max of data[10] to data[19].
+  Thread3 will find the max of a[20] to a[29]. It will then return
+  the largest element of of each thread's result.
