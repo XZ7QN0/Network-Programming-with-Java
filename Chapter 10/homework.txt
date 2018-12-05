@@ -1,0 +1,4 @@
+Create a secure server to calculate principe, interest, and number of months. Server will calculate the payment,
+and send back the results.
+
+Make this in both a non-secure server and then the secure server.
