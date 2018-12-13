@@ -75,28 +75,31 @@ public class PhonebookServer {
 	public String GET(String contactInfo) {
 		try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 			StringBuilder sb = new StringBuilder();
-			String line = reader.readLine();
+			String line = null;
 			
-			while(line != null) {
+			while((line = reader.readLine()) != null) {
 				sb.append(line);
-				line = "";
+				System.out.println(line);
+				
 				int space = line.indexOf(" ", 0);
 				
 				// If first string parsed equals contact info being looked for
 				if(contactInfo == line.substring(0, space)) {
 					break;
 				} else {
-					sb.append(System.lineSeparator());
+					//sb.append(System.lineSeparator());
+					sb.setLength(0);
 					line = reader.readLine();
 				}
-				
 			}
+			
+			//System.out.println(sb);
 			
 			// Something is wrong with returning line, returning a plain string works fine
 			// TODO: Figure out the problem with this
 			// IDEA: Print the string "line" and return some dummy string, we can figure out what line is
 			// Other idea: Print the string "line" in the while loop
-			return line;
+			return sb.toString();
 		} catch (IOException ex) {
 			System.err.println("File not found. Try writing to the file before reading it?");
 		}
